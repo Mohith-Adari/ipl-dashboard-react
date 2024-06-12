@@ -1,0 +1,26 @@
+/* Write your CSS here */
+.won {
+  color: #18ed66;
+}
+
+.lost {
+  color: #e31a1a;
+}
+
+.match-card-list {
+  list-style: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  height: 20%;
+  border-radius: 6px;
+  background-color: #0f172a;
+  margin: 20px;
+}
+
+.competing-team {
+  height: 100px;
+}

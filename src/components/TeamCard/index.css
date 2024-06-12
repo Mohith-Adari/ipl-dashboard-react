@@ -1,0 +1,28 @@
+/* Write your CSS here */
+li {
+  list-style: none;
+  display: flex;
+  width: 40vw;
+  margin: 10px;
+  height: 20vh;
+}
+
+.team-card-container {
+  background-color: #ffffff33;
+  border: 2px solid #ffffff33;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+.team-logo {
+  width: 100px;
+  height: 100px;
+  margin: 0px 10px;
+}
+
+.team-name {
+  color: white;
+}

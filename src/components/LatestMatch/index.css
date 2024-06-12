@@ -1,0 +1,30 @@
+/* Write your CSS here */
+.latest-match-container {
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 80%;
+}
+
+.left-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  margin-right: 10px;
+}
+
+.opp-team-logo {
+  height: 150px;
+  align-self: center;
+  justify-self: center;
+  margin: 10px;
+}
+
+.right-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

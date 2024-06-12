@@ -1,0 +1,30 @@
+/* Write your CSS here */
+.team-matches-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, #d91c1f, #a4261d);
+  min-height: 100vh;
+}
+
+.latest {
+  color: white;
+  align-self: flex-start;
+}
+
+.team-matches {
+  background-image: linear-gradient(to bottom, #d91c1f, #a4261d);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-matches-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
