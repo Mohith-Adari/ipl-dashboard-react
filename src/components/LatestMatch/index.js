@@ -19,14 +19,14 @@ const LatestMatch = props => {
   return (
     <div className="latest-match-container">
       <div className="left-info">
-        <h1>{competingTeam}</h1>
+        <p>{competingTeam}</p>
         <p>{date}</p>
         <p>{venue}</p>
         <p>{result}</p>
       </div>
       <img
         src={competingTeamLogo}
-        alt={competingTeam}
+        alt={`latest match ${competingTeam}`}
         className="opp-team-logo"
       />
       <div className="right-info">

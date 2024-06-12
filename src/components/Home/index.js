@@ -2,6 +2,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import TeamCard from '../TeamCard'
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 
 class Home extends Component {
@@ -23,13 +24,6 @@ class Home extends Component {
 
     this.setState({iplList: formattedData, isLoading: false})
   }
-
-  renderLoading = () => (
-    <div data-testid="loader">
-      {' '}
-      <Loader type="Oval" color="#ffffff" height={50} width={50} />{' '}
-    </div>
-  )
 
   renderHome() {
     const {iplList} = this.state
@@ -57,9 +51,15 @@ class Home extends Component {
     const {isLoading} = this.state
 
     return (
-      <div className="main-container">
-        {isLoading ? this.renderLoading() : this.renderHome()}
-      </div>
+      <>
+        {isLoading ? (
+          <div data-testid="loader">
+            <Loader type="Oval" color="#ffffff" height={50} width={50} />
+          </div>
+        ) : (
+          this.renderHome()
+        )}
+      </>
     )
   }
 }

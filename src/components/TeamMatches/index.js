@@ -3,7 +3,7 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
-
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import './index.css'
 
 class TeamMatches extends Component {
@@ -56,13 +56,6 @@ class TeamMatches extends Component {
     this.setState({matchDetails: formattedData, isLoading: false})
   }
 
-  renderLoading = () => (
-    <div data-testid="loader">
-      {' '}
-      <Loader type="Oval" color="#ffffff" height={50} width={50} />{' '}
-    </div>
-  )
-
   renderTeamMatch() {
     const {matchDetails} = this.state
     const {teamBannerUrl, latestMatchDetails, recentMatches} = matchDetails
@@ -85,9 +78,13 @@ class TeamMatches extends Component {
 
     return (
       <>
-        <div className="team-matches">
-          {isLoading ? this.renderLoading() : this.renderTeamMatch()}
-        </div>
+        {isLoading ? (
+          <div data-testid="loader">
+            <Loader type="Oval" color="#ffffff" height={50} width={50} />
+          </div>
+        ) : (
+          this.renderTeamMatch()
+        )}
       </>
     )
   }
